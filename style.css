@@ -1,0 +1,156 @@
+/* Estilizações globais */
+@font-face {
+    font-family: "Alice";
+    src: url(fonts/Alice-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Comic Relief";
+    src: url(fonts/ComicRelief-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Relief", sans-serif;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.display-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+
+
+
+/* Estilizações da primeira parte */
+.primeiraparte {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 150px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.primeiraparte header, .segundaparte header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.primeiraparte header img, .segundaparte header img {
+    width: 200px;
+    border-radius: 50px;
+    margin-block-end: 10px;
+}
+
+.content main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content main div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.content main .hobbies ul li {
+    list-style-position: inside;
+    margin-inline-start: 10px;
+}
+
+.content main .links-uteis ul {
+    list-style-position: inside;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.content main .links-uteis ul li {
+    display: flex;
+    align-items: center;
+}
+
+.content main .links-uteis ul li img {
+    width: 30px;
+}
+
+.content main .links-uteis ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    margin-inline-start: 3px;
+}
+
+.segundaparte header {
+    display: none;
+}
+
+
+
+
+/* Estilizações da segunda parte */
+.segundaparte {
+    background-image: url(assets/background1.jpg);
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 1440px) {
+    .primeiraparte {
+        padding: 100px;
+    }
+}
+
+@media (max-width: 950px) {
+    .primeiraparte {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 750px) {
+    .display-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .content header {
+        display: none;
+    }
+
+    .segundaparte {
+        grid-row: 1/2;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .segundaparte header {
+        display: flex;
+        color: white;
+    }
+}
