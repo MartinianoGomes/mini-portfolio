@@ -103,7 +103,7 @@
 
 /* Estilizações da segunda parte */
 .segundaparte {
-    background-image: url(assets/background1.jpg);
+    background-image: url(assets/background2.svg);
     width: 100%;
     height: 100%;
 
@@ -146,6 +146,6 @@
 
     .segundaparte header {
         display: flex;
-        color: white;
+        color: #5c5050;
     }
 }
