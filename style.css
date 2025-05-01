@@ -43,8 +43,9 @@
 .primeiraparte header, .segundaparte header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    margin: 0 auto;
 }
 
 .primeiraparte header img, .segundaparte header img {
